@@ -39,6 +39,26 @@ class ViewController: UIViewController {
         print("User ==> \(userString)")
         print("Password ==> \(passwordString)")
         
+//        Check User
+        if var myCheckPassword = dicMemberStrings[userString] {
+//            True
+            print("TruePassword ==> \(myCheckPassword)")
+            
+            if (passwordString == myCheckPassword) {
+                
+                displayTextField.text = displayStrings[3]
+                
+            } else {
+                
+                displayTextField.text = displayStrings[2]
+                
+            }
+            
+        }   else {
+//            False
+            displayTextField.text = displayStrings[1]
+        }
+        
         
     }   // loginButton
     
